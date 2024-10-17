@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="template_find_car" inherit_id="website.homepage" name="Find A Car">
+        <xpath expr="//t[@t-call='website.layout']" position="replace">
+            <t t-call="website.layout">
+                <t t-set="pageName" t-value="'homepage'"/>
+                <div id="wrap" class="oe_structure oe_empty"/>
+
+                <div class="x_container">
+
+                    <div class="x_header">Search by car brand or model</div>
+                    <form id="filter-form" method="post" action="/career" enctype="multipart/form-data">
+
+                        <t t-foreach="brand_models_dict.items()" t-as="item">
+                            <div class="x_brand">
+                                <div>
+                                    <input type="checkbox" t-att-id="item[0].name" name="brand" t-att-value="item[0].id"/>
+                                    <label t-att-for="item[0].name" t-esc="item[0].name"></label>
+                                </div>
+                            </div>
+
+                            <div class="x_models">
+                                <t t-foreach="item[1]" t-as="model">
+                                    <input type="checkbox" t-att-id="model.name" name="model" t-att-value="model.id" t-att-data-brand-id="item[0].id" />
+                                    <label t-att-for="model.name" t-esc="model.name"></label><br/>
+                                </t>
+                            </div>
+
+                            <hr class="solid"/>
+                        </t>
+                    </form>
+                </div>
+
+                <div class="x_container products-list">
+                    <t t-if="not products">
+                        <p>We don't Have Cars Right Now.</p>
+                    </t>
+                    <t t-else="">
+                        <t t-foreach="products" t-as="product">
+                            <t t-esc="product.name"/>
+                            <br/>
+                            <label>Price:</label> <t t-esc="product.list_price"/>
+                            <hr class="solid"/>
+                        </t>
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
