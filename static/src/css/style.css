@@ -1,0 +1,79 @@
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+.x_container {
+    max-width: 400px; /* Maximum width */
+    margin: 40px auto;
+    background-color: white; /* White background */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Header Styles */
+.x_header {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    font-size: 18px; /* Header font size */
+    font-weight: bold; /* Bold font */
+    margin-bottom: 20px; /* Margin below header */
+}
+
+/* Brand Styles */
+.x_brand {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items */
+    font-weight: bolder; /* Bolder font */
+    border-spacing: 5px;
+    /*border-top: 1px solid #ddd; !* Top border *!*/
+}
+
+.x_brand:last-child {
+    border-bottom: none; /* Remove bottom border for last item */
+}
+
+.x_brand img {
+    width: 70px; /* Logo width */
+    height: 50px; /* Logo height */
+    margin-top: 10px; /* Margin above logo */
+}
+
+.x_brand label {
+    font-size: 16px; /* Label font size */
+}
+
+/* Models Styles */
+.x_models {
+    padding-left: 20px; /* Left padding for models */
+    margin-bottom: 10px; /* Margin below models */
+    display: block; /* Block display */
+}
+
+.x_models input {
+    margin-right: 10px; /* Space between input and label */
+}
+
+/* Controls Styles */
+.x_controls {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center controls */
+    margin-top: 20px; /* Margin above controls */
+}
+
+/* Button Styles */
+.x_button {
+    padding: 10px 20px; /* Inner padding */
+    border: none; /* No border */
+    background-color: black; /* Black background */
+    color: #fff; /* White text */
+    font-size: 16px; /* Button font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.x_button.reset {
+    background-color: red; /* Red background for reset button */
+}
