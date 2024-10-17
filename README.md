@@ -1,3 +1,7 @@
+## Demo video of the task 
+https://youtu.be/6UmSoPuWJpY
+
+
 ## Important Point
 
 I believe that this task can be effectively achieved without converting the model from `Many2one` to `Many2many`. Doing so may not be the most suitable approach for this case, as it would allow a product to be associated with multiple brands simultaneously, which is illogical since a vehicle cannot belong to more than one brand.
